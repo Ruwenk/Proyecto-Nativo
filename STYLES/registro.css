@@ -3,26 +3,18 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 0px;
+    margin: 0%;
     padding: 0%;
-    border: #f5f3f3;
+
+    
+   
+
   }
-  #Fondo{
-  width:1260px;
-  height:1000px;
-  
-  }
-  
-  .slogan {
-    color: rgb(254, 247, 247);
-    position: absolute;
-    font-size: 25px;
-    top: 220px;
-    right: 220px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: solid;
-  }
-  
+  #Fondoreg{
+   width:1260px;
+  height:1260px;
+    }
+    
   header {
     background-color: #371111;
     color: rgb(253, 249, 249);
@@ -58,10 +50,7 @@ body {
     color: aliceblue;
   }
   
-  .inicio {
-    font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  
   
   #logo {
     width: 80px;
@@ -113,24 +102,6 @@ body {
     height: 50px;
   }
   
-  
-  
-  .login {
-    color: #f8f2f2;
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    position: absolute;
-    top: -80px;
-    left: 10px;
-  }
-  
-  
-  section {
-    position: absolute;
-    top: 200px;
-    left: 30px;
-  }
   #logo2{
   position: absolute;
   left: 1%;
@@ -192,3 +163,33 @@ body {
     right: 40px;
     top: 3%;
   }
+  .formulario{
+    background-color: #491111d3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fdf9f9;
+    position: absolute;
+    top: 250px;
+    left: 30%;
+     border: 1px solid #3e0303; /* Borde del recuadro */
+     padding: 80px; /* Espacio interno para separar el contenido del borde */
+     width: 280px; /* Ancho deseado del recuadro */
+     margin: 0 auto; /* Centra horizontalmente */
+    }
+    .boton-registro{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 30px; /* Centra verticalmente (opcional) */
+}
+      h1{
+     position: absolute;
+     left: auto;
+     top: 5px;
+     color: rgb(244, 247, 247);
+    
+      } 
+    
+    
+    
+    
+    
+
