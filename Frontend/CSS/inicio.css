@@ -1,0 +1,215 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0%;
+  padding: 0%;
+
+}
+
+#Fondo{
+ width:1365px;
+height:1260px;
+
+  }
+  .slogan{
+      color: rgb(254, 247, 247);
+      position: absolute;
+      font-size: 20px;
+      top: 250px; /* Cambia a 50% para centrar verticalmente */
+      right: 300px; /* Cambia a 50% para centrar horizontalmente */
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-decoration: solid; /* Cambia a none, 'solid' no es válido */
+  }
+
+header {
+  background-color:  #270b0b;
+  color: rgb(253, 249, 249);
+  text-align: center;
+  padding: 2px;
+  margin: -20px;
+  font-size: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+
+ 
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 33px; 
+  position: absolute;
+  top: -9px;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(242, 238, 238);
+  display: contents;
+  margin-right: 30px;
+  margin-top: -8px; 
+
+}
+
+.titulo {
+  position: absolute;
+  top: 5px;
+  left: 100px;
+  color: aliceblue;
+}
+
+.inicio {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#logo {
+  width: 80px;
+  height: 51px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 130%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px  #270b0b;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #f5f3f3;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color:  #270b0b;
+}
+
+footer {
+  background-color: #270b0bde;
+  text-align: center;
+  color: aliceblue;
+  padding: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 15px;
+  border: 5px rgba(6, 6, 6, 0.952);
+  height: 50px;
+}
+
+#logo2{
+position: absolute;
+left: 1%;
+top: 10%;
+width: 150px; height: 105px;
+}
+
+a{
+  color: #f5f3f3;
+}
+
+.banner{
+display: flex;
+margin-right: 5px;
+justify-content:space-evenly;
+align-items: center;
+}
+
+.icon{
+  display: flex;
+  gap: 6px;
+  position: absolute;
+  left: 400px;
+  top: 50px;
+  
+  
+}
+section {
+  position: absolute;
+  top: 250px;
+  left: 30px;
+}
+
+.login {
+  color: #f8f2f2;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  position: absolute;
+  top: -80px;
+  left: 10px;
+}
+
+
+.icon img{
+width: 30px;
+
+}
+.whatsapp-icon img{
+width: 30px;
+position: absolute;
+right:440px ;
+top: 50px ;
+}
+  
+
+.sig{
+position: absolute;
+left: 415px;
+top:5px;
+}
+.cont{
+position: absolute;
+right: 415px ;
+top: 5px ;
+}
+.texto-footer{
+position:absolute;
+top: 100px;
+left: 360px;
+font-size: small;
+
+}
+.busqueda{
+  position: absolute;
+  right: 40px;
+  top: 3%;
+}
+
+  .boton-registro{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  margin-top: 30px; /* Centra verticalmente (opcional) */
+}
+    h1{
+   position: absolute;
+   left: auto;
+   top: 5px;
+   color: rgb(244, 247, 247);
+  
+    } 

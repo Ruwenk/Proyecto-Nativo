@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+  
+  }
+  #Fondoped{
+   width:1365px;
+  height:1260px;
+    }
+    
+  header {
+    background-color:  #270b0b;
+    color: rgb(253, 249, 249);
+    text-align: center;
+    padding: 4px;
+    margin: 0;
+    font-size: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(242, 238, 238);
+    display: contents;
+    margin-right: 20px;
+    margin-top: -8px; 
+  }
+  
+  .titulo {
+    position: absolute;
+    top: 5px;
+    left: 100px;
+    color: aliceblue;
+  }
+  
+  
+  
+  #logo {
+    width: 80px;
+    height: 51px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+  
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    width: 130%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px  #270b0b;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    color: #f5f3f3;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color:  #270b0b;
+  }
+  
+  footer {
+    background-color: #270b0bde;
+    text-align: center;
+    color: aliceblue;
+    padding: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    border: 5px rgba(6, 6, 6, 0.952);
+    height: 50px;
+  }
+  
+  #logo2{
+  position: absolute;
+  left: 1%;
+  top: 10%;
+  width: 150px; height: 105px;
+  }
+  
+  a{
+    color: #f5f3f3;
+  }
+  
+  .banner{
+  display: flex;
+  margin-right: 5px;
+  justify-content:space-evenly;
+  align-items: center;
+  }
+  
+  .icon{
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    
+    
+  }
+  .icon img{
+  width: 30px;
+  
+  }
+  .whatsapp-icon img{
+  width: 30px;
+  position: absolute;
+  right:440px ;
+  top: 50px ;
+  }
+    
+  
+  .sig{
+  position: absolute;
+  left: 415px;
+  top:5px;
+  }
+  .cont{
+  position: absolute;
+  right: 415px ;
+  top: 5px ;
+  }
+  .texto-footer{
+  position:absolute;
+  top: 100px;
+  left: 360px;
+  font-size: small;
+  
+  }
+  .busqueda{
+    position: absolute;
+    right: 40px;
+    top: 3%;
+  }
+  
+    .boton-registro{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 30px; /* Centra verticalmente (opcional) */
+  }
+      h1{
+     position: absolute;
+     left: auto;
+     top: 5px;
+     color: rgb(251, 253, 253);
+      } 
+     
+
+
+    .order-form {
+        background-color: #746d6dd2;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        position: absolute;
+        top: 200px;
+        left: 380px;
+    }
+    .order-form h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .order-form .form-group {
+        margin-bottom: 15px;
+    }
+    .order-form .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .order-form .form-group input,
+    .order-form .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #0e0909;
+        border-radius: 5px;
+    }
+    .order-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .order-form button:hover {
+        background-color: #218838;
+    }

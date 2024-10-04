@@ -1,0 +1,150 @@
+<!DOCTYPE html> <!--Esta es la pagina de registro-->
+<html>
+<head>
+    <link rel="stylesheet" href="/Frontend/CSS/registro.css"> <!--Este es el enlace que concecta la hoja de estilos para registro-->
+    <title>Nativo Madera Online </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+ 
+</head>
+   
+<header>
+    <!-- Esta es la barra de busqueda de navegacion-->
+    <div class="busqueda">
+    <form action="/buscar" method="get">
+        <input type="text" name="q" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+    </form>
+   </div>
+   <!-- este es el logo superior-->
+        <div class="header-container">
+        <img id="logo" src="/imagenes/logo.jpg">
+        <h2 class="titulo">Nativo Madera</h2>
+         </div>
+
+        <!-- aqui inicia la barra de navegacion -->
+       
+    <h2>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="/Frontend/HTML/inicio.html"><i class="fas fa-chevron-down"></i> MENU INICIO</a>
+                <div class="dropdown-content">
+                    <a href="/Frontend/HTML/registro.html">Registro</a>
+                    <a href="/HTML/Ventas.html">Ventas</a>
+                    <a href="/HTML/Produccion.html">Producción</a>
+                    <a href="/HTML/Facturacion.html">Facturación</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="/HTML/Tiendas.html">TIENDAS FISICAS </a>
+            
+        
+            
+            </li>
+            <li class="dropdown">
+                <a href="#PRODUCTOS"><i class="fas fa-chevron-down"></i> PRODUCTOS</a>
+                <div class="dropdown-content">
+                    <a href="#Producto1">Comedores</a>
+                    <a href="#Producto2">Closets</a>
+                    <a href="#Producto1">Cocinas</a>
+                    <a href="#Producto2">Juegos de sala</a>
+                    <a href="#Producto1">Camas</a>
+                    
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="/Frontend/HTML/mis  pedidos.html"> MIS PEDIDOS </a>
+            
+
+            </li>
+            <li class="dropdown">
+                <a href="/HTML/Contactanos.html">CONTACTANOS</a>
+                   
+            </li>
+        </ul>
+    </nav>
+
+</header>
+<body>
+    
+
+    <img id="Fondoreg"src="/imagenes/fondo.jpg">  <!-- esta es la imagen de fondo -->
+    
+     <!-- aqui inicia el formulario de registro-->
+     <div class= "formulario">
+        <h1 id="titulo-for">Registro de Usuario</h1> <br>
+        <form action="procesar_registro.php" method="post"> 
+            <label for="Usuario"> Seleccione Tipo de Usuario: <br> </label> <br> 
+    <select name="Usuario" id="Usuario"> Tipo de usuario
+        <option value="Cliente">Cliente</option> 
+        <option value="Vendedor">Vendedor</option>
+        <option value="Administrador">Administrador</option>
+    </select> <br>
+     <br>
+            <label for="Nombres">Identificacion:</label> <br>
+            <input type="text" id="id" name="id" required> <br>
+            <br>
+            <label for="Nombres">Nombre completo:</label> <br>
+            <input type="text" id="Nombre" name="name" required> <br>
+            <br>
+            <label for="email">Correo Electrónico:</label> <br>
+            <input type="email" id="email" name="email" required> <br>
+            <br>
+           <label for="contrasena">Contraseña:</label> <br>
+            <input type="password" id="contrasena" name="contrasena" required> <br>
+            <br> 
+            <label for="Ciudad">Ciudad:</label> <br>
+            <input type="text" id="Ciudad" name="Ciudad" required> <br>
+            <br>
+            <label for="contrasena">Direccion:</label> <br>
+            <input type="text" id="Direccion" name="Direccion" required> <br>
+            <br> 
+            <label for="Telefono">Telefono:</label> <br>
+            <input type="text" id="Telefono" name="Telefono" required> <br>
+            <br>
+            <br>
+            <div class="boton-registro">
+            <input type="submit" value="Registrarse"> </div>
+        </form>
+    </div>
+<!--fin del formulario -->
+    
+
+    <footer class="banner">
+        <div>    
+            <p class="texto-footer">GAES 06 - 2721458 / Análisis y desarrollo de software / Todos los Derechos Reservados 2024</p>
+        </div>
+    
+        <div>
+            <img id="logo2" src="/imagenes/logo.jpg" alt="Logo">
+        </div>
+    
+        <p class="cont">Contáctanos</p>
+        <div class="whatsapp-icon">     
+            <a href="http://www.facebook.com" target="_blank">
+                <img src="/imagenes/whatsapp_109861.png" alt="whatsapp">
+
+        </div>
+
+        <p class="sig">Síguenos</p>
+    
+        <div class="icon">
+            <a href="http://www.facebook.com" target="_blank">
+                <img src="/imagenes/facebook_109862.png" alt="Facebook">
+            </a>
+            <a href="http://www.instagram.com" target="_blank">
+                <img src="/imagenes/instagam_109863.png" alt="Instagram">
+            </a>
+            <a href="http://www.tiktok.com" target="_blank">
+                <img src="/imagenes/tok_tik_brands_icon_256563.png" alt="TikTok">
+            </a>
+        </div>
+    </footer>
+ 
+</body>
+
+        
+   
+
+
+</html>

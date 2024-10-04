@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/Frontend/CSS/inicio.css">
+
+    <!-- este el titulo de la ventana del navegador -->
+    <title>Nativo Madera Online </title>
+    <link rel="icon" href="/imagenes/nativo-madera-logoi.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="/Frontend/CSS/inicio.css">
+	<script src="https://kit.fontawesome.com/2f8765440c.js" crossorigin="anonymous">
+	</script>
+</head>
+   
+<header>
+    <div class="busqueda">
+    <form action="/buscar" method="get">
+        <input type="text" name="q" placeholder="Buscar...">
+        <button type="submit">Buscar</button>
+    </form>
+   </div>
+   
+        <div class="header-container">
+        <img id="logo" src="/imagenes/logo.jpg">
+        <h2 class="titulo"> Nativo Madera </h2>
+         </div>
+
+        <!-- aqui inicia la barra de navegacion -->  
+    <h2>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="/Frontend/HTML/inicio.html"><i class="fas fa-chevron-down"></i> MENU INICIO</a>
+                <div class="dropdown-content">
+                    <a href="/Frontend/HTML/registro.html">Registro</a>
+                    <a href="/HTML/Ventas.html">Ventas</a>
+                    <a href="/HTML/Produccion.html">Producción</a>
+                    <a href="/HTML/Facturacion.html">Facturación</a>
+                
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="/HTML/Tiendas.html">TIENDAS </a>
+        
+            </li>
+            <li class="dropdown">
+                <a href="#PRODUCTOS"><i class="fas fa-chevron-down"></i> PRODUCTOS</a>
+                <div class="dropdown-content">
+                    <a href="#Producto1">Comedores</a>
+                    <a href="#Producto2">Closets</a>
+                    <a href="#Producto3">Cocinas</a>
+                    <a href="#Producto4">Juegos de sala</a>
+                    <a href="#Producto5">Camas</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="/Frontend/HTML/mis  pedidos.html"> MIS PEDIDOS </a>
+            
+            </li>
+            <li class="dropdown">
+                <a href="/HTML/Contactanos.html">CONTACTANOS</a>
+                
+               
+            </li>
+        </ul>
+    </nav>
+
+</header>
+<body>
+    <img id="Fondo" src="/imagenes/fondo.jpg">
+     
+
+<section>
+<div class="wrapper">
+<form action="">
+<h1 class="login">Iniciar sesion</h1>
+<br>
+<div class="input-box">
+<input type="text" placeholder="Username" required> <i class="fa fa-user" aria-hidden="true"></i>
+</div>
+
+<div class="input-box">
+<input type="password" placeholder="password" required> <i class="fa fa-key" aria-hidden="true"></i>
+</div>
+<div class="remember-forgot">
+<label><input type="checkbox"> Recordar datos</input> </label>
+<a href="#">Olvidaste tu contraseña?</a>
+</div>
+
+<button type="submit" class="boton">Entrar</button> <br>
+<label for="Usuario"> seleccione usuario: </label> 
+<select name="Usuario" id="Usuario"> Tipo de usuario
+    <option value="Cliente">Cliente</option>
+    <option value="Vendedor">Vendedor</option>
+    <option value="Administrador">Administrador</option>
+</select>
+<div class="register-link">
+<a href="registro.html">Registrarse</a>
+</div>
+</div>
+</section>
+
+</form>
+
+    <div class="slogan">   
+ <h1> INSPIRED BY NATURE </h1>
+         
+    </div>
+    
+    <footer class="banner">
+        <div>    
+            <p class="texto-footer">GAES 06 - 2721458 / Análisis y desarrollo de software / Todos los Derechos Reservados 2024</p>
+        </div>
+    
+        <div>
+            <img id="logo2" src="/imagenes/logo.jpg" alt="Logo">
+        </div>
+    
+        <p class="cont">Contáctanos</p>
+        <div class="whatsapp-icon">     
+            <a href="http://www.whatsapp.com" target="_blank">
+                <img src="/imagenes/whatsapp_109861.png" alt="whatsapp">
+
+        </div>
+
+        <p class="sig">Síguenos</p>
+    
+        <div class="icon">
+            <a href="http://www.facebook.com" target="_blank">
+                <img src="/imagenes/facebook_109862.png" alt="Facebook">
+            </a>
+            <a href="http://www.instagram.com" target="_blank">
+                <img src="/imagenes/instagam_109863.png" alt="Instagram">
+            </a>
+            <a href="http://www.tiktok.com" target="_blank">
+                <img src="/imagenes/tok_tik_brands_icon_256563.png" alt="TikTok">
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
