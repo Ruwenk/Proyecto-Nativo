@@ -101,7 +101,12 @@
 </div>
 </div>
 </section>
-
+<script>
+    document.querySelector('.boton').addEventListener('click', function(event) {
+        event.preventDefault();  // Evitar el envío del formulario
+        alert('Su pedido ha sido registrado correctamente');
+    });
+</script>
 </form>
 
     <div class="slogan">   

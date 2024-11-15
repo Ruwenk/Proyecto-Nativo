@@ -70,44 +70,58 @@
 
     <img id="Fondoreg"src="/imagenes/fondo.jpg">  <!-- esta es la imagen de fondo -->
     
-     <!-- aqui inicia el formulario de registro-->
-     <div class= "formulario">
-        <h1 id="titulo-for">Registro de Usuario</h1> <br>
-        <form action="procesar_registro.php" method="post"> 
-            <label for="Usuario"> Seleccione Tipo de Usuario: <br> </label> <br> 
-    <select name="Usuario" id="Usuario"> Tipo de usuario
-        <option value="Cliente">Cliente</option> 
-        <option value="Vendedor">Vendedor</option>
-        <option value="Administrador">Administrador</option>
-    </select> <br>
-     <br>
-            <label for="Nombres">Identificacion:</label> <br>
-            <input type="text" id="id" name="id" required> <br>
-            <br>
-            <label for="Nombres">Nombre completo:</label> <br>
-            <input type="text" id="Nombre" name="name" required> <br>
-            <br>
-            <label for="email">Correo Electrónico:</label> <br>
-            <input type="email" id="email" name="email" required> <br>
-            <br>
-           <label for="contrasena">Contraseña:</label> <br>
-            <input type="password" id="contrasena" name="contrasena" required> <br>
-            <br> 
-            <label for="Ciudad">Ciudad:</label> <br>
-            <input type="text" id="Ciudad" name="Ciudad" required> <br>
-            <br>
-            <label for="contrasena">Direccion:</label> <br>
-            <input type="text" id="Direccion" name="Direccion" required> <br>
-            <br> 
-            <label for="Telefono">Telefono:</label> <br>
-            <input type="text" id="Telefono" name="Telefono" required> <br>
-            <br>
-            <br>
+    <div class="formulario">
+        <h1 id="titulo-for">Registro de Usuario</h1><br>
+        <form id="registroForm">
+            <label for="Usuario">Seleccione Tipo de Usuario:<br></label><br>
+            <select name="Usuario" id="Usuario">
+                <option value="Cliente">Cliente</option> 
+                <option value="Vendedor">Vendedor</option>
+                <option value="Administrador">Administrador</option>
+            </select><br><br>
+            <label for="name">nombre completo:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="contraseña">contraseña:</label><br>
+            <input type="password" id="contraseña" name="contraseña" required><br><br>
+            <label for="ciudad">Ciudad:</label><br>
+            <input type="text" id="ciudad" name="ciudad" required><br><br>
+            <label for="direccion">dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+            <label for="telefono">teléfono:</label><br>
+            <input type="text" id="telefono" name="telefono" required><br><br>
             <div class="boton-registro">
-            <input type="submit" value="Registrarse"> </div>
+                <input type="submit" value="Registrarse">
+            </div>
         </form>
     </div>
-<!--fin del formulario -->
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const formObject = {};
+            formData.forEach((value, key) => formObject[key] = value);
+    
+            fetch('/registrar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formObject)
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Respuesta del servidor:', data);  // Añadir esta línea para depuración
+                alert( "Registro de usuario exitoso");
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+    
+</body>
     
 
     <footer class="banner">

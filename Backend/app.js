@@ -1,42 +1,56 @@
-const express = require('express')
-const app = express()
-const port = 3005
-// apertura de libreria mysql2//
+const express = require('express');
+const app = express();
+const port = 3005;
 const mysql = require('mysql2/promise');
-// se crea la conexion a la base de datos login//
+
+
+app.use(express.json()); // Middleware para analizar JSON en las solicitudes
+
+// Crear la conexión a la base de datos nativo
 const connection = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  database: 'login',
+  database: 'nativo',
 });
+
 app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-app.get('/login', async (req, res) => {   // req=request, peticion; res= response, respuesta// 
+  res.send('Hello World!');
+});
+
+app.get('/login', async (req, res) => {
   const datos = req.query;
-// realizar peticiones a la base de datos login //
-try {
-  const [results, fields] = await connection.query(
-    // consultar existencia de usuario //
-    "SELECT * FROM `usuarios` WHERE `usuario` = ? AND `clave` = ?",
-    [datos.usuario, datos.clave]  // datos a utilizar//
-  );
-  // impresion de respuesta en el navegador 
-  if (results. length > 0){
-      res. status(200).send ("Inicio de sesion correcto")
-  } else {
-      res.status (401).send ("Datos incorrectos")
+  try {
+    const [results, fields] = await connection.query(
+      "SELECT * FROM usuarios WHERE identificacion = ? AND contraseña = ?",
+      [datos.Identificacion, datos.contraseña]
+    );
+    if (results.length > 0) {
+      res.status(200).send("Inicio de sesión correcto");
+    } else {
+      res.status(401).send("Datos incorrectos");
+    }
+    console.log(results);
+    console.log(fields);
+  } catch (err) {
+    console.log(err);
   }
-  console.log(results); // results contains rows returned by server
-  console.log(fields); // fields contains extra meta data about results, if available
-} catch (err) {
-  console.log(err);
-}
-  
-  })
-  app.get('/validar', (req, res) => {
-    res.send('Usuario Validado!')
-  })
+});
+
+app.post('/registrar', async (req, res) => {
+  const { id, name, email, contraseña, ciudad, direccion, telefono } = req.body;
+  console.log('Datos recibidos:', req.body); // Verificar datos recibidos
+  try {
+    const [result] = await connection.query(
+      "INSERT INTO usuarios (identificacion, nombre completo, email, contraseña, ciudad, direccion, telefono) VALUES (?, ?, ?, ?, ?, ?, ?)",
+      [id, name, email, contraseña, ciudad, direccion, telefono]
+    );
+    res.status(201).send("Registro exitoso."); // Mensaje que se envía al cliente
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error al registrar usuario.");
+  }
+});
+
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
