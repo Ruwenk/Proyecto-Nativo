@@ -66,119 +66,51 @@
 
 </header>
 <body>
-    
-
-    <img id="Fondoreg"src="/imagenes/fondo.jpg">  <!-- esta es la imagen de fondo -->
-    <section id="productos" class="container my-5">
-        <h2 class="text-center">Comedores</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/imagenes/comedor1.png" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Comedor clásico y lujoso</h5>
-                        <p class="card-text">$3.0542.000</p>
-                        <button class="btn btn-primary">Comprar</button>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/imagenes/comedor2.jpg" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Comedor contemporáneo</h5>
-                        <p class="card-text">$1.680.000</p>
-                        <button class="btn btn-primary">Comprar</button>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/imagenes/comedor3.jpg" class="card-img-top" alt="Producto 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Comedor moderno</h5>
-                        <p class="card-text">$2.500.000</p>
-                        <button class="btn btn-primary">Comprar</button>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/imagenes/comedor4.jpg" class="card-img-top" alt="Producto 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Minimalista, con un toque natural</h5>
-                        <p class="card-text">$3.225.000</p>
-                        <button class="btn btn-primary">Comprar</button>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card mb-4">
-                    <img src="/imagenes/comedor5.jpg" class="card-img-top" alt="Producto 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Comedor Moderno</h5>
-                        <p class="card-text">$2.635.000</p>
-                        <button class="btn btn-primary">Comprar</button>
-                        <button class="btn btn-secondary">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <div class="formulario">
         <h1 id="titulo-for">Registro de Usuario</h1><br>
-        <form id="registroForm">
-            <label for="Usuario">Seleccione Tipo de Usuario:<br></label><br>
+       <form id="registroForm" action="http://localhost:4000/registro" method="post">
+          <label for="Usuario">Seleccione Tipo de Usuario:<br></label><br>
             <select name="Usuario" id="Usuario">
-                <option value="Cliente">Cliente</option> 
+                <option value="Cliente">Cliente</option>
                 <option value="Vendedor">Vendedor</option>
                 <option value="Administrador">Administrador</option>
             </select><br><br>
-            <label for="name">nombre completo:</label><br>
+    
+            <label for="numero">Documento:</label><br>
+            <input type="int" id="numero" name="numero" required><br><br>
+    
+            <label for="name">Nombre completo:</label><br>
             <input type="text" id="name" name="name" required><br><br>
-            <label for="email">correo electrónico:</label><br>
+    
+            <label for="email">Correo electrónico:</label><br>
             <input type="email" id="email" name="email" required><br><br>
-            <label for="contraseña">contraseña:</label><br>
-            <input type="password" id="contraseña" name="contraseña" required><br><br>
+    
+            <label for="password">Contraseña:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+    
             <label for="ciudad">Ciudad:</label><br>
             <input type="text" id="ciudad" name="ciudad" required><br><br>
-            <label for="direccion">dirección:</label><br>
+    
+            <label for="direccion">Dirección:</label><br>
             <input type="text" id="direccion" name="direccion" required><br><br>
-            <label for="telefono">teléfono:</label><br>
+    
+            <label for="telefono">Teléfono:</label><br>
             <input type="text" id="telefono" name="telefono" required><br><br>
+    
             <div class="boton-registro">
                 <input type="submit" value="Registrarse">
             </div>
         </form>
     </div>
-    <script>
-        document.getElementById('registroForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            const formObject = {};
-            formData.forEach((value, key) => formObject[key] = value);
     
-            fetch('/registrar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formObject)
-            })
-            .then(response => response.text())
-            .then(data => {
-                console.log('Respuesta del servidor:', data);  // Añadir esta línea para depuración
-                alert( "Registro de usuario exitoso");
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-        });
-    </script>
+        </form>
+    </div>
+    
+
+    <img id="Fondoreg"src="/imagenes/fondo.jpg">  <!-- esta es la imagen de fondo -->
+
+ 
+   
     
 </body>
     
