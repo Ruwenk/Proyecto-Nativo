@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+}
+#Fondo{
+   width:1365px;
+   height:1260px;
+}
+
+#productos {
+    position: absolute;
+    top: 80px;
+    right: 70px;;
+
+}
+
+#productos h2 {
+    margin-bottom: 50px;
+    color: #fdfcfc;
+    font-family: sans-serif
+}
+
+.card {
+    border: 1px solid hsl(0, 17%, 94%);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-body button {
+    margin: 5px;
+    font-size: 1em;
+    padding: 10px 20px;
+}
+/* Estilos personalizados para el botón "Volver a Inicio" */
+.btn-volver {
+    background-color: #17a2b8; /* Color de fondo */
+    position: absolute;
+    top: 650px;
+    right: 100px;
+    border: none; /* Sin borde */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea */
+    font-size: 1em; /* Tamaño de la fuente */
+    margin: 5px 2px; /* Margen */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+.btn-volver:hover {
+    background-color: #138496; /* Color de fondo al pasar el cursor */
+}
+
+

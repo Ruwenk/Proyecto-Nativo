@@ -1,0 +1,28 @@
+#pasarela-muebles {
+    margin-top: 50px;
+}
+
+#pasarela-muebles h2 {
+    margin-bottom: 30px;
+    color: #270b0b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    bottom: 50px;
+}
+
+.carousel-caption button {
+    margin: 5px;
+    font-size: 16px;
+    padding: 10px 20px;
+}

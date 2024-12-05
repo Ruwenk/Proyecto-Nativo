@@ -1,28 +1,33 @@
-<!DOCTYPE html> <!--Esta es la pagina de registro-->
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="/Frontend/CSS/tiendas.css"> <!--Este es el enlace que concecta la hoja de estilos para registro-->
+    <link rel="stylesheet" href="/Frontend/CSS/inicio.css">
+
+    <!-- este el titulo de la ventana del navegador -->
     <title>Nativo Madera Online </title>
+    <link rel="icon" href="/imagenes/nativo-madera-logoi.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
- 
+    <link rel="stylesheet" href="css/normalize.css">
+	<script src="https://kit.fontawesome.com/2f8765440c.js" crossorigin="anonymous">
+	</script>
 </head>
    
 <header>
-    <!-- Esta es la barra de busqueda de navegacion-->
     <div class="busqueda">
     <form action="/buscar" method="get">
         <input type="text" name="q" placeholder="Buscar...">
         <button type="submit">Buscar</button>
     </form>
    </div>
-   <!-- este es el logo superior-->
+   
         <div class="header-container">
         <img id="logo" src="/imagenes/logo.jpg">
-        <h2 class="titulo">Nativo Madera</h2>
+        <h2 class="titulo"> Nativo Madera </h2>
          </div>
 
-        <!-- aqui inicia la barra de navegacion -->
-       
+        <!-- aqui inicia la barra de navegacion -->  
     <h2>
     <nav>
         <ul>
@@ -30,54 +35,49 @@
                 <a href="/Frontend/HTML/inicio.html"><i class="fas fa-chevron-down"></i> MENU INICIO</a>
                 <div class="dropdown-content">
                     <a href="/Frontend/HTML/registro.html">Registro</a>
-                    <a href="/HTML/Ventas.html">Ventas</a>
-                    <a href="/HTML/Produccion.html">Producción</a>
-                    <a href="/HTML/Facturacion.html">Facturación</a>
+                    <a href="/Frontend/HTML/ventas.html">Ventas</a>
+                    <a href="/Frontend/HTML/produccion.html">Producción</a>
+                    <a href="/Frontend/HTML/facturacion.html">Facturación</a>
+                
                 </div>
-            </li>
-            <li class="dropdown">
-                <a href="/Frontend/HTML/tiendas.html">TIENDAS FISICAS </a>
-            
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-chevron-down"></i> TIENDAS</a>
+                    <div class="dropdown-content">
+                        <a href="/Frontend/HTML/tiendas.html">FISICAS</a>
+                        <a href="/Frontend/HTML/online.html">ONLINE</a>
+                    </div>
+                </li>
+                
         
-            
             </li>
             <li class="dropdown">
                 <a href="#PRODUCTOS"><i class="fas fa-chevron-down"></i> PRODUCTOS</a>
                 <div class="dropdown-content">
-                    <a href="#Producto1">Comedores</a>
-                    <a href="#Producto2">Closets</a>
-                    <a href="#Producto1">Cocinas</a>
-                    <a href="#Producto2">Juegos de sala</a>
-                    <a href="#Producto1">Camas</a>
-                    
+                    <a href="/Frontend/HTML/comedores.html">Comedores</a>
+                    <a href="/Frontend/HTML/closets.html">Closets</a>
+                    <a href="/Frontend/HTML/cocinas.html">Cocinas</a>
+                    <a href="/Frontend/HTML/salas.html">Juegos de sala</a>
+                    <a href="/Frontend/HTML/camas.html">Camas</a>
                 </div>
             </li>
             <li class="dropdown">
                 <a href="/Frontend/HTML/mis  pedidos.html"> MIS PEDIDOS </a>
             
-
             </li>
             <li class="dropdown">
                 <a href="/Frontend/HTML/contactanos.html">CONTACTANOS</a>
-                   
+                
+               
             </li>
         </ul>
     </nav>
 
 </header>
 <body>
-    
-
-    <img id="Fondoreg"src="/imagenes/fondo.jpg">  <!-- esta es la imagen de fondo -->
-    
-    
+    <img id="Fondo" src="/imagenes/fondo.jpg">
+     
 
 
-
-
-
-
-    
     
     <footer class="banner">
         <div>    
@@ -90,7 +90,7 @@
     
         <p class="cont">Contáctanos</p>
         <div class="whatsapp-icon">     
-            <a href="http://www.facebook.com" target="_blank">
+            <a href="http://www.whatsapp.com" target="_blank">
                 <img src="/imagenes/whatsapp_109861.png" alt="whatsapp">
 
         </div>
@@ -109,11 +109,7 @@
             </a>
         </div>
     </footer>
- 
+
 </body>
-
-        
-   
-
 
 </html>
