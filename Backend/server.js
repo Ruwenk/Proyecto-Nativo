@@ -25,10 +25,14 @@ db.connect(err => {
     console.log('Conectado a la base de datos MySQL');
 });
 
-
-// Ruta para servir el formulario HTML
+// Ruta para servir el formulario HTML de registro
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../Frontend/HTML/registro.html'));
+});
+
+// Ruta para servir el formulario de inicio de sesión HTML
+app.get('/Frontend/HTML/inicio.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Frontend/HTML/inicio.html'));
 });
 
 // Ruta para manejar el formulario de registro
@@ -44,6 +48,27 @@ app.post('/registro', (req, res) => {
             return;
         }
         res.send('Registro exitoso');
+    });
+});
+
+// Ruta para manejar el inicio de sesión
+app.post('/login', (req, res) => {
+    const { documento, contraseña, usuario } = req.body;
+
+    const query = 'SELECT * FROM usuarios WHERE documento = ? AND contraseña = ? AND tipo_usuario = ?';
+    
+    db.query(query, [documento, contraseña, usuario], (err, result) => {
+        if (err) {
+            res.status(500).send('Error en el servidor');
+            console.error(err);
+            return;
+        }
+
+        if (result.length > 0) {
+            res.send('Inicio de sesión exitoso');
+        } else {
+            res.status(401).send('Correo o contraseña incorrectos');
+        }
     });
 });
 

@@ -1,28 +1,42 @@
-#pasarela-muebles {
-    margin-top: 50px;
+.registro-ventas {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
 }
 
-#pasarela-muebles h2 {
-    margin-bottom: 30px;
-    color: #270b0b;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.registro-ventas h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.carousel-item {
-    height: 500px;
+.ventas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
 }
 
-.carousel-item img {
-    height: 100%;
-    object-fit: cover;
+.ventas th, .ventas td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
 
-.carousel-caption {
-    bottom: 50px;
+.ventas th {
+    background-color: #f2f2f2;
+    font-weight: bold;
 }
 
-.carousel-caption button {
-    margin: 5px;
-    font-size: 16px;
-    padding: 10px 20px;
+.ventas tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.ventas tr:hover {
+    background-color: #f1f1f1;
+}
+
+.ventas td, .ventas th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }

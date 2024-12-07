@@ -77,42 +77,56 @@
     <img id="Fondo" src="/imagenes/fondo.jpg">
      
 
-<section>
-<div class="wrapper">
-<form action="">
-<h1 class="login">Iniciar sesion</h1>
-<br>
-<div class="input-box">
-<input type="text" placeholder="Username" required> <i class="fa fa-user" aria-hidden="true"></i>
-</div>
-
-<div class="input-box">
-<input type="password" placeholder="password" required> <i class="fa fa-key" aria-hidden="true"></i>
-</div>
-<div class="remember-forgot">
-<label><input type="checkbox"> Recordar datos</input> </label>
-<a href="#">Olvidaste tu contraseña?</a>
-</div>
-
-<button type="submit" class="boton">Entrar</button> <br>
-<label for="Usuario"> seleccione usuario: </label> 
-<select name="Usuario" id="Usuario"> Tipo de usuario
-    <option value="Cliente">Cliente</option>
-    <option value="Vendedor">Vendedor</option>
-    <option value="Administrador">Administrador</option>
-</select>
-<div class="register-link">
-<a href="registro.html">Registrarse</a>
-</div>
-</div>
-</section>
-<script>
-    document.querySelector('.boton').addEventListener('click', function(event) {
-        event.preventDefault();  // Evitar el envío del formulario
-        alert('Su pedido ha sido registrado correctamente');
-    });
-</script>
-</form>
+    <section>
+        <div class="wrapper">
+            <form action="http://localhost:4000/login" method="post">
+                <h1 class="login">Iniciar sesión</h1>
+                <br>
+                <div class="input-box">
+                    <input type="int" name="documento" placeholder="documento" required>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+    
+                <div class="input-box">
+                    <input type="password" name="contraseña" placeholder="contraseña" required>
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Recordar datos</label>
+                    <a href="#">Olvidaste tu contraseña?</a>
+                </div>
+    
+                <button type="submit" class="boton">Entrar</button>
+                <br>
+                <label for="usuario">Seleccione usuario:</label> 
+                <select name="usuario" id="tipo_usuario">
+                    <option value="Cliente">Cliente</option>
+                    <option value="Vendedor">Vendedor</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+                <div class="register-link">
+                    <a href="registro.html">Registrarse</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const boton = document.querySelector('.boton');
+            if (boton) {
+                boton.addEventListener('click', (event) => {
+                    // Código de demostración
+                    // event.preventDefault();
+                    // alert('Inicio de sesión correcto');
+                });
+            } else {
+                console.error("El elemento con la clase 'boton' no se encontró en el DOM.");
+            }
+        });
+    </script>
+    
+    
+    
 
     <div class="slogan">   
  <h1> INSPIRED BY NATURE </h1>
